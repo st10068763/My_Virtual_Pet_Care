@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".PetActivityPage"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="359dp"
+        android:layout_height="354dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/dog_pluto"
+        app:layout_constraintBottom_toTopOf="@+id/btnFood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnFood"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnClean"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        android:backgroundTint="@color/plutoYellow"
+        android:textStyle="bold"
+        android:text="Food"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btnClean"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlay"
+        app:layout_constraintStart_toEndOf="@+id/btnFood"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        android:backgroundTint="@color/plutoYellow"
+        android:textStyle="bold"
+        android:text="Clean"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnClean"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        android:backgroundTint="@color/plutoYellow"
+        android:textStyle="bold"
+        android:text="Play"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textViewHunger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/editTextHungerLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFood"
+        android:layout_marginTop="16dp"
+        android:text="Hunger:"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextHungerLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewHunger"
+        app:layout_constraintTop_toBottomOf="@+id/btnFood"
+        android:backgroundTint="@color/white"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:editable="false" />
+
+    <TextView
+        android:id="@+id/textViewClean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCleanLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHunger"
+        android:layout_marginTop="16dp"
+        android:text="Clean:"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextCleanLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewClean"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHunger"
+        android:backgroundTint="@color/white"
+        android:inputType="number"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textViewHappy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/editTextHappyLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewClean"
+        android:layout_marginTop="16dp"
+        android:text="Happy:"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextHappyLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewHappy"
+        app:layout_constraintTop_toBottomOf="@+id/textViewClean"
+        android:backgroundTint="@color/white"
+        android:inputType="number"
+        android:textColor="@color/black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
